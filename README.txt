@@ -8,7 +8,6 @@ MapReduce. Por quê?
 Sim, por que o spark mantem em memoria os resultados do "map" que é utilizado em seguida para fazer o "reduce",
 ja o processo convencional MapReduce, armazena em disco os resultados de cada steps, aumetando assim o tempo de I/O.
 
-
 3) Qual é a função do SparkContext​?
 
 Estabelece uma conexão entre a aplicação e o ambiente Spark, dentro de um SparkContext
@@ -20,7 +19,12 @@ Estabelece uma conexão entre a aplicação e o ambiente Spark, dentro de um Spa
 abstraindo a localização física destes dados.
 
 5) GroupByKey​ ​é menos eficiente que reduceByKey​ ​em grandes dataset. Por quê?
-????
+
+Ambos fazem um agregação chave/valor de todos os elementeos de um determinado dataset,
+porem o ReduceBykey faz um primeiro agrupamento chave/valor seperadamente em cada partição do dataset, 
+e depois junto os resultados em um segundo agrupamento em memória. Ja o GroupBYkey faz o agrupamento todo 
+de uma só vez em memoria.
+
 
 6) Explique o que o código Scala abaixo faz.
 
