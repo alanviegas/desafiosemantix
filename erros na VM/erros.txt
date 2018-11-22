@@ -1,0 +1,66 @@
+### executo o pipe
+
+[cloudera@quickstart Projeto6]$ spark-submit load_serverlogs.py
+Traceback (most recent call last):
+  File "/home/cloudera/Projeto6/load_serverlogs.py", line 3, in <module>
+    import pandas as pd
+ImportError: No module named pandas
+[cloudera@quickstart Projeto6]$
+
+### tento instalar o pandas mas não rola
+
+[cloudera@quickstart ~]$ sudo pip install pandas
+DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6
+Collecting pandas
+/usr/lib/python2.6/site-packages/pip/_vendor/urllib3/util/ssl_.py:339: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+/usr/lib/python2.6/site-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+  Using cached https://files.pythonhosted.org/packages/08/01/803834bc8a4e708aedebb133095a88a4dad9f45bbaf5ad777d2bea543c7e/pandas-0.22.0.tar.gz
+    Complete output from command python setup.py egg_info:
+    Couldn't find index page for 'numpy' (maybe misspelled?)
+    No local packages or download links found for numpy>=1.9.0
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/pip-build-FQx0zH/pandas/setup.py", line 743, in <module>
+        **setuptools_kwargs)
+      File "/usr/lib64/python2.6/distutils/core.py", line 113, in setup
+        _setup_distribution = dist = klass(attrs)
+      File "/usr/lib/python2.6/site-packages/setuptools/dist.py", line 221, in __init__
+        self.fetch_build_eggs(attrs.pop('setup_requires'))
+      File "/usr/lib/python2.6/site-packages/setuptools/dist.py", line 245, in fetch_build_eggs
+        parse_requirements(requires), installer=self.fetch_build_egg
+      File "/usr/lib/python2.6/site-packages/pkg_resources.py", line 538, in resolve
+        dist = best[req.key] = env.best_match(req, self, installer)
+      File "/usr/lib/python2.6/site-packages/pkg_resources.py", line 780, in best_match
+        return self.obtain(req, installer) # try and download/install
+      File "/usr/lib/python2.6/site-packages/pkg_resources.py", line 792, in obtain
+        return installer(requirement)
+      File "/usr/lib/python2.6/site-packages/setuptools/dist.py", line 293, in fetch_build_egg
+        return cmd.easy_install(req)
+      File "/usr/lib/python2.6/site-packages/setuptools/command/easy_install.py", line 466, in easy_install
+        raise DistutilsError(msg)
+    distutils.errors.DistutilsError: Could not find suitable distribution for Requirement.parse('numpy>=1.9.0')
+
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-FQx0zH/pandas/
+You are using pip version 9.0.3, however version 18.1 is available.
+
+
+## O numpy esta instalado
+
+
+[cloudera@quickstart ~]$ sudo pip show numpy
+DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6
+Name: numpy
+Version: 1.9.0
+Summary: NumPy: array processing for numbers, strings, records, and objects.
+Home-page: http://www.numpy.org
+Author: NumPy Developers
+Author-email: numpy-discussion@scipy.org
+License: BSD
+Location: /usr/lib64/python2.6/site-packages
+Requires:
+You are using pip version 9.0.3, however version 18.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[cloudera@quickstart ~]$
