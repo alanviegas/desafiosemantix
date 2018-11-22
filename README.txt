@@ -43,8 +43,9 @@ desenvolvi um pipe "load_serverlogs.py" para fazer a leitura dos arquivos e carr
 
 A idéia seria depois fazer as querys necessárias na tabela pra responder as questões solicitadas.
 
-Porem estou enfrentando um problema na VM (da Cloudera) para rodar este pipe, estão faltando alguns 
-pacotes (pandas) que utilizo em algumas partes do codigo, e não estou conseguindo instalá-lo.
+Não consegui testar o codigo, estou enfrentando um problema na VM (da Cloudera) para rodar este pipe, 
+estão faltando alguns pacotes (pandas) que utilizo em algumas partes do codigo, e não estou conseguindo 
+instalá-lo.
 
 Na pasta "erros na VM" estão os logs de erro.
 
