@@ -1,4 +1,4 @@
-1) Qual o objetivo do comando cache​ ​em Spark?
+﻿1) Qual o objetivo do comando cache​ ​em Spark?
 
 Manter datasets em memória pra agilizar o acesso a seus dados
 
@@ -34,6 +34,30 @@ counts.saveAsTextFile("hdfs://...")
 
 Ler todos os arquivos de um determinado diretorio no HDFS, e para cada linha de cada arquivo, mapeia as palavras, 
 contabiliza sua ocorrencia, e no final geral um arquivo com cada palavra e a quantidade de vezes que foi encontrada.
+
+
+7) Sobre o problema proposto.
+
+Crie um tabela no Hive "create_table_t_serverlogs.hql" para carregar todos os logs dos servidores e 
+desenvolvi um pipe "load_serverlogs.py" para fazer a leitura dos arquivos e carregar esta tabela.
+
+A idéia seria depois fazer as querys necessárias na tabela pra responder as questões solicitadas.
+
+Porem estou enfrentando um problema na VM (da Cloudera) para rodar este pipe, estão faltando alguns 
+pacotes (pandas) que utilizo em algumas partes do codigo, e não estou conseguindo instalá-lo.
+
+Na pasta "erros na VM" estão os logs de erro.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
